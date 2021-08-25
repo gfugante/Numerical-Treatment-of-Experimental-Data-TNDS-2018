@@ -1,0 +1,16 @@
+all: Esercizio.o parabola.o bisezione.o  signfunction.o
+	g++ Esercizio_5.2.o parabola.o bisezione.o signfunction.o -o Esercizio_5.2
+
+Esercizio.o: Esercizio_5.2.cpp funzionebase.h parabola.h solutore.h bisezione.h signfunction.h
+	g++ -c Esercizio_5.2.cpp -o Esercizio_5.2.o
+
+parabola.o: parabola.cpp parabola.h funzionebase.h
+	g++ -c parabola.cpp -o parabola.o
+
+bisezione.o: bisezione.cpp bisezione.h signfunction.h solutore.h funzionebase.h
+	g++ -c bisezione.cpp -o bisezione.o
+			
+signfunction.o:  signfunction.cpp signfunction.h 
+	g++ -c signfunction.cpp -o signfunction.o
+
+

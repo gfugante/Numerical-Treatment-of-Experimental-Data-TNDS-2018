@@ -1,0 +1,8 @@
+all: 12
+12: 12.o funzioni.o
+	g++ 12.o funzioni.o -o 12
+12.o: 12.cc prototipi.h
+	g++ -c 12.cc -o 12.o
+funzioni.o: funzioni.cc prototipi.h
+	g++ -c funzioni.cc -o funzioni.o
+

@@ -1,0 +1,14 @@
+Esercizio: Esercizio.o integrator.o 
+	g++ Esercizio.o integrator.o -o Esercizio_7.2
+
+Esercizio.o: Esercizio_7.2.cpp funzionebase.h integrator.h sin.h
+	g++ -c Esercizio_7.2.cpp -o Esercizio.o
+
+integrator.o: integrator.cpp integrator.h funzionebase.h
+	g++ -c integrator.cpp -o integrator.o
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+all: esercizio3.1
+esercizio3.1: esercizio3.1.o posizione.o
+	g++ esercizio3.1.o posizione.o -o esercizio3.1
+esercizio3.1.o: esercizio3.1.cc posizione.h
+	g++ -c esercizio3.1.o -o esercizio3.1.o
+posizione.o: posizione.cc posizione.h
+	g++ -c posizione.cc -o posizione.o

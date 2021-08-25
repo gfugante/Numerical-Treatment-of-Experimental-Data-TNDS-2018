@@ -1,0 +1,17 @@
+all: Esercizio 	
+	./Esercizio_1.4
+
+Esercizio: Esercizio.o funzioni_modulo.o
+	g++ Esercizio_1.4.o funzioni_modulo.o -o Esercizio_1.4 
+
+Esercizio.o: Esercizio_1.4.cc funzioni_modulo.hh
+	g++ -c Esercizio_1.4.cc -o Esercizio_1.3.o
+
+funzioni.o: funzioni_modulo.cc funzioni_modulo.hh
+	g++ -c funzioni_modulo.cc -o funzioni_modulo.o
+
+
+	
+
+
+ 

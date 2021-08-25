@@ -1,0 +1,13 @@
+all: Esercizio.o particella.o posizione.o
+	g++ Esercizio_3.3.o particella.o posizione.o -o Esercizio_3.3
+
+Esercizio.o: Esercizio_3.2.cc particella.hh posizione.hh
+	g++ -c Esercizio_3.3.cc -o Esercizio_3.3.o
+
+particella.o: particella.cc particella.hh posizione.hh
+	g++ -c particella.cc -o particella.o
+
+posizione.o: posizione.cc posizione.hh
+	g++ -c posizione.cc -o posizione.o
+
+

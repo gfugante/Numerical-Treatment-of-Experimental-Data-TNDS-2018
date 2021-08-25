@@ -1,0 +1,15 @@
+
+
+
+main: main.o funzioni.o
+	g++ main.o funzioni.o -o main
+
+main.o: Esercizio_1.2.C funzioni.h
+	g++ -c Esercizio_1.2.C -o main.o
+
+funzioni.o: funzioni.C funzioni.h
+	g++ -c funzioni.C -o funzioni.o
+
+
+
+

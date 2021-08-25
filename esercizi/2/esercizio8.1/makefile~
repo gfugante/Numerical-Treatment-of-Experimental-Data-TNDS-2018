@@ -1,0 +1,10 @@
+LIBS:= `root-config --libs`
+INCS:= `root-config --cflags`
+
+all: 8_1
+8_1: 8_1.o Random.o
+	g++ 8_1.o Random.o -o 8_1 ${INCS} ${LIBS}
+8_1.o: 8_1.cc Random.h
+	g++ -c 8_1.cc -o 8_1.o ${INCS}
+Random.o: Random.cc Random.h
+	g++ -c Random.cc -o Random.o

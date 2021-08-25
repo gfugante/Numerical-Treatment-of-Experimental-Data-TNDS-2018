@@ -1,0 +1,11 @@
+LIBS:=`root-config --libs`
+INCS:=`root-config --cflags`
+
+limitec: main.o random.o gaussiana.o
+	g++ main.o random.o gaussiana.o -o limitec ${INCS} ${LIBS}
+main.o: main.cpp random.hpp
+	g++ -c main.cpp -o main.o ${INCS}
+random.o: random.cpp random.hpp funzionebase.h
+	g++ -c random.cpp -o random.o
+gaussiana.o: gaussiana.C gaussiana.h funzionebase.h
+	g++ -c gaussiana.C -o gaussiana.o

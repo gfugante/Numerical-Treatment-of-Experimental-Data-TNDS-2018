@@ -1,0 +1,5 @@
+all: esercizio1.3
+esercizio1.3: esercizio1.3.o
+	g++ esercizio1.3.o -o esercizio1.3
+esercizio1.3.o: esercizio1.3.cc modulo.h
+	g++ -c esercizio1.3.cc -o esercizio1.3.o

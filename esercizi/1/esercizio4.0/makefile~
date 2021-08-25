@@ -1,0 +1,21 @@
+all: Esercizio.o posizione.o particella.o puntomateriale.o campovettoriale.o
+	g++ Esercizio_4.0.o posizione.o particella.o puntomateriale.o campovettoriale.o -o Esercizio_3.0
+
+Esercizio.o: Esercizio_4.0.cc posizione.hh particella.hh puntomateriale.hh campovettoriale.hh
+	g++ -c Esercizio_4.0.cc -o Esercizio_4.0.o
+
+posizione.o: posizione.cc posizione.hh
+	g++ -c posizione.cc -o posizione.o
+
+particella.o: particella.cc particella.hh
+	g++ -c particella.cc -o particella.o
+
+puntomateriale.o:puntomateriale.cc puntomateriale.hh particella.hh posizione.hh campovettoriale.hh
+	g++ -c puntomateriale.cc -o puntomateriale.o
+
+campovettoriale.o: campovettoriale.cc campovettoriale.hh posizione.hh
+	g++ -c campovettoriale.cc -o campovettoriale.o
+
+
+
+

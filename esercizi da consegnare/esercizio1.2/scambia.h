@@ -1,0 +1,4 @@
+
+void scambia (double* ,double* );
+
+

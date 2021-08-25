@@ -1,0 +1,27 @@
+
+all: compito
+
+compito: main.o Vettore.o VettoreLineare.o Calorimetro.o RungeKutta.o Random.o 
+	g++ -o compito main.o Vettore.o VettoreLineare.o Calorimetro.o RungeKutta.o Random.o 
+
+main.o: main.C VettoreLineare.h Calorimetro.h Vettore.h RungeKutta.h
+	g++ -c main.C -o main.o 
+
+Vettore.o: Vettore.C Vettore.h
+	g++ -c Vettore.C -o Vettore.o
+
+VettoreLineare.o: VettoreLineare.cpp VettoreLineare.h
+	g++ -c VettoreLineare.cpp -o VettoreLineare.o
+
+RungeKutta.o: RungeKutta.cpp RungeKutta.h
+	g++ -c RungeKutta.cpp -o RungeKutta.o  
+
+Calorimetro.o: Calorimetro.cpp Calorimetro.h
+	g++ -c Calorimetro.cpp -o Calorimetro.o
+
+Random.o: Random.C Random.h 
+	g++ -c Random.C -o Random.o
+
+clean:
+	rm -f *.o soluzione.txt compito
+

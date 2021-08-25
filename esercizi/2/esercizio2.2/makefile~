@@ -1,0 +1,10 @@
+all: sorts
+sorts: sort.o vettore.o 
+	g++ sort.o vettore.o -o sorts
+sort.o: sort.cc vettore.h
+	g++ -c sort.cc -o sort.o
+vettore.o: vettore.cc prototipi.h
+	g++ -c vettore.cc funzioni.o -o vettore.o
+funzioni.o: funzioni.cc prototipi.h
+	g++ -c funzioni.cc -o funzioni.o
+

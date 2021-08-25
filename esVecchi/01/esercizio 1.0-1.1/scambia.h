@@ -1,0 +1,4 @@
+
+void scambia (int* , int*);
+
+

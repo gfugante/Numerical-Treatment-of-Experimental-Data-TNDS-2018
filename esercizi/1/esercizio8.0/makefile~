@@ -1,0 +1,18 @@
+INCS=` root-config --cflags`
+LIBS=` root-config --libs`
+
+
+Esercizio: Esercizio.o integrator.o 
+	g++ Esercizio.o integrator.o -o Esercizio_7.1 $ $(INCS)$(LIBS)
+
+Esercizio.o: Esercizio_7.1.cpp funzionebase.h integrator.h sin.h
+	g++ -c Esercizio_7.1.cpp -o Esercizio.o $(INCS)
+
+integrator.o: integrator.cpp integrator.h funzionebase.h
+	g++ -c integrator.cpp -o integrator.o $(INCS)
+
+
+
+
+
+

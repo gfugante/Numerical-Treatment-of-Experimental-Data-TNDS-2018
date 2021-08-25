@@ -1,0 +1,4 @@
+6.1 completamente sbagliato
+7.2 non parte
+
+mancano 6.1 7.2 8.2 10

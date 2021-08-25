@@ -1,0 +1,16 @@
+LIBS=`root-config --libs`
+INCS=`root-config --cflags`
+
+all: 9.1
+9.1: 9.1.o integrale.o vettoredati.o vettore.o Random.o
+	g++ 9.1.o integrale.o vettoredati.o vettore.o Random.o -o 9.1 ${INCS} ${LIBS}
+9.1.o: 9.1.cc integrale.h vettoredati.h vettore.h Random.h seno.h funzioneBase.h
+	g++ -c 9.1.cc -o 9.1.o ${INCS}
+integrale.o: integrale.cc integrale.h Random.h funzioneBase.h seno.h
+	g++ -c integrale.cc -o integrale.o
+vettoredati.o: vettoredati.cc vettore.h vettoredati.h
+	g++ -c vettoredati.cc -o vettoredati.o
+vettore.o: vettore.cc vettore.h
+	g++ -c vettore.cc -o vettore.o
+Random.o: Random.cc Random.h
+	g++ -c Random.cc -o Random.o

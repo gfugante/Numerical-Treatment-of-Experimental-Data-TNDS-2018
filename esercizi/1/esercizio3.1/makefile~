@@ -1,0 +1,10 @@
+all: Esercizio.o posizione.o 
+	g++ Esercizio_3.1.o posizione.o -o Esercizio_3.1
+
+Esercizio.o: Esercizio_3.1.cc posizione.hh
+	g++ -c Esercizio_3.1.cc -o Esercizio_3.1.o
+
+funzioni.o: posizione.cc posizione.hh
+	g++ -c posizione.cc -o posizione.o
+
+

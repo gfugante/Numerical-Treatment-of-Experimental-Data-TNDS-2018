@@ -1,0 +1,12 @@
+LIBS=`root-config --libs`
+INCS=`root-config --cflags`
+
+all: 8.3
+8.3: 8.3.o Random.o gaussiana.o 
+	g++ 8.3.o Random.o gaussiana.o -o 8.3 ${INCS} ${LIBS}
+8.3.o: 8.3.cc Random.h gaussiana.h funzioneBase.h
+	g++ -c 8.3.cc -o 8.3.o ${INCS}
+gaussiana.o: gaussiana.cc gaussiana.hfunzioneBase.h
+	g++ -c gaussiana.cc -o gaussiana.o
+Random.o: Random.cc Random.h
+	g++ -c Random.cc -o Random.o
